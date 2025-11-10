@@ -27,8 +27,6 @@ const generateImageURL = (
   isRemoteImage: boolean = false
 ) => {
   const { filename, path, extension } = splitFilePath({ filePath: src });
-  console.log("filename, path, extension:", filename, path, extension);
-  
   const useWebp =
     process.env.nextImageExportOptimizer_storePicturesInWEBP != undefined
       ? process.env.nextImageExportOptimizer_storePicturesInWEBP == "true"

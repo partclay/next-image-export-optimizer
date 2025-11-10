@@ -1,7 +1,7 @@
 module.exports = function urlToFilename(url: string) {
   try {
     const parsedUrl = new URL(url);
-    const extension = parsedUrl.pathname.split(".").length > 1 ? parsedUrl.pathname.split(".").pop() : null;
+    const extension = parsedUrl.pathname.split(".").pop();
     if (extension) {
       return hashAlgorithm(url).toString().concat(".", extension);
     }
